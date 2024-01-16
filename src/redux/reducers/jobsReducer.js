@@ -1,6 +1,7 @@
-import { SET_JOBS } from "../actions";
+import { SET_JOBS } from "../actions/fetch";
+
 const jobsInitialState = {
-  jobs: [],
+  results: [],
 };
 
 const jobsReducer = (state = jobsInitialState, action) => {
@@ -8,7 +9,7 @@ const jobsReducer = (state = jobsInitialState, action) => {
     case SET_JOBS:
       return {
         ...state,
-        jobs: action.payload,
+        results: action.payload,
       };
     default:
       return state;
